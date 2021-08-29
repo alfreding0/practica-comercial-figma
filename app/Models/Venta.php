@@ -11,6 +11,8 @@ class Venta extends Model
 
     protected $table = 'venta';
 
+    protected $primaryKey = 'cod_venta';
+
     public function cliente(){
         return $this->belongsTo(Cliente::class, 'id_cliente', 'id');
     }
