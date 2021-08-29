@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('clientes.update', [$persona->id]) }}">
+        <form method="POST" action="{{ route('persona.update', [$persona->id]) }}">
             @csrf
             @method('PUT')
 
@@ -18,45 +18,38 @@
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s12 m4">
-                                <input id="nombre" type="text" class="validate" name="nombre" value="{{$persona->nombre}}">
-                                <label for="nombre">Nombre Completo:</label>
+                            <div class="col s12 m4 input-field ">
+                                <input id="nombre" type="text" class="validate" name="nombre" value="{{ $persona->nombre }}">
+                                <label for="nombre">Nombres:</label>
                                 @error('nombre')
-                                    <span class="help-block red-text"> {{ $message }} </span>
+                                <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
                             <div class="input-field col s12 m4">
-                                <input id="telefono" type="number" class="validate" name="telefono" value="{{$persona->telefono}}">
-                                <label for="telefono">telefono:</label>
-                                @error('telefono')
+                                <input id="apellido" type="text" class="validate" name="apellido" value="{{ $persona->apellido }}">
+                                <label for="apellido">Apellidos:</label>
+                                @error('apellido')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m4">
-                                <input id="carnet_identidad" type="text" class="validate" name="carnet_identidad" value="{{$persona->carnet_identidad}}">
-                                <label for="carnet_identidad">Carnet Identidad:</label>
-                                @error('carnet_identidad')
-                                <span class="help-block red-text"> {{ $message }} </span>
-                                @enderror
-                            </div>
-
-                            <div class="input-field col s12">
-                                <textarea id="direccion" class="validate materialize-textarea" name="direccion">{{$persona->direccion}}</textarea>
+                                <input id="direccion" type="text" class="validate" name="direccion" value="{{ $persona->direccion }}">
                                 <label for="direccion">Dirección:</label>
                                 @error('direccion')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
-                            <div class="input-field col s12 m12">
-                                <input id="correo" type="email" class="validate" name="correo" value="{{$persona->correo}}">
-                                <label for="correo">Correo:</label>
-                                @error('correo')
+                            <div class="input-field col s12 m4">
+                                <input id="telefono" type="number" class="validate" name="telefono" value="{{ $persona->telefono }}">
+                                <label for="telefono">telefono:</label>
+                                @error('telefono')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
                         </div>
+
                         <div class="card-action right-align">
                             <button type="submit" class="waves-effect waves-brown btn-flat red-text bold" onclick="showProgress()">Guardar</button>
                         </div>

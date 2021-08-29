@@ -28,7 +28,7 @@
                                 <td>{{ $persona->direccion }}</td>
                                 <td>{{ $persona->telefono }}</td>
                                 <td>
-                                    <a href="{{ route('persona.show', [$persona->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>
+{{--                                    <a href="{{ route('persona.show', [$persona->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>--}}
                                     <a href="{{ route('persona.edit', [$persona->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a>
                                     <a href="{{ route('persona.destroy', [$persona->id]) }}"><span class="new badge red" data-badge-caption="eliminar"></span></a>
                                 </td>
