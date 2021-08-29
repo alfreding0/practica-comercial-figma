@@ -11,6 +11,8 @@ class Producto extends Model
 
     protected $table = 'producto';
 
+    protected $primaryKey = 'cod_producto';
+
     public function detalle_venta(){
         return $this->hasMany(DetalleVenta::class, 'id_producto', 'cod_producto');
     }
