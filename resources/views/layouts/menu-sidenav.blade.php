@@ -1,8 +1,8 @@
 <ul id="sidenav-left" class="sidenav">
     <li><div class="user-view dark-primary-color">
-{{--            <a href="#user"><img class="circle" src="images/yuna.jpg"></a>--}}
-{{--            <a href="#name"><span class="white-text name">{{ auth()->user()->persona->nombre }}</span></a>--}}
-{{--            <a href="#email"><span class="white-text email">{{ auth()->user()->email }}</span></a>--}}
+            <a href="#user"><img class="circle" src="{{ asset('imgs/perfil.png') }}"></a>
+            <a href="#name"><span class="white-text name">{{ auth()->user()->persona->nombre.' '.auth()->user()->persona->apellido }}</span></a>
+            <a href="#email"><span class="white-text email">{{ auth()->user()->email }}</span></a>
         </div>
     </li>
     <li><a class="subheader">Administración</a></li>
