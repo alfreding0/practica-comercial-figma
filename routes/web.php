@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
 
 Auth::routes();
@@ -61,19 +61,11 @@ Route::group(['prefix'=>'venta'], function (){
 
 
 Route::get('/test', function (){
-//   $cliente = new \App\Models\Cliente();
-//   $cliente->nombre_completo = 'Fernanda Rios';
-//   $cliente->ci = '235234';
-//   $cliente->celular = '7086987';
-//   $cliente->genero = 'M';
-//   $cliente->save();
+    $personas = \App\Models\Persona::all();
 
-    $cliente = new \App\Models\Persona();
-    $cliente->nombre = 'Jessica';
-    $cliente->apellido = 'Jordan';
-    $cliente->direccion = 'Camiri #2';
-    $cliente->telefono = '70928352';
-    $cliente->save();
-
-   return $cliente;
+   return $personas;
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
