@@ -6,10 +6,7 @@
         </div>
     </li>
     <li><a class="subheader">Administración</a></li>
-    <li><a class="waves-effect" href="#">Gestionar Usuarios<i class="material-icons">apps</i></a></li>
-{{--    <li><a class="waves-effect" href="{{ route('generos.index') }}">Gestionar Géneros <i class="material-icons">apps</i></a></li>--}}
-{{--    <li><a class="waves-effect" href="{{ route('libros.index') }}">Gestionar Libros <i class="material-icons">apps</i></a></li>--}}
-{{--    <li><a class="waves-effect" href="{{ route('peliculas.index') }}">Gestionar Películas <i class="material-icons">apps</i></a></li>--}}
-{{--    <li><a class="waves-effect" href="{{ route('clientes.index') }}">Gestionar Clientes <i class="material-icons">apps</i></a></li>--}}
-{{--    <li><a class="waves-effect" href="{{ route('alquileres.index') }}">Gestionar Alquileres <i class="material-icons">apps</i></a></li>--}}
+    <li><a class="waves-effect" href="{{ route('persona.index') }}">Gestionar Personas<i class="material-icons">class</i></a></li>
+    <li><a class="waves-effect" href="{{ route('producto.index') }}">Gestionar Productos<i class="material-icons">class</i></a></li>
+    <li><a class="waves-effect" href="{{ route('venta.index') }}">Gestionar Ventas<i class="material-icons">class</i></a></li>
 </ul>
